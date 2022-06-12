@@ -1,0 +1,25 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+$black: #292929;
+$body: #666;
+
+//colors
+$blue: #1968B1;
+
+//normalize
+@import "https://necolas.github.io/normalize.css/latest/normalize.css";
+
+//setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
+@import "./layout.scss";
+
+//components
+@import "./components/hero.scss";
+@import "./components/header.scss";
+@import "./components/features.scss";
+@import "./components/feature.scss";
+@import "./components/btn.scss";
+@import "./components/section.scss";
+@import "./components/headline.scss";
+@import "./components/benefits.scss";
+@import "./components/benefit.scss";

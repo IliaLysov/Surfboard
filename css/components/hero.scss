@@ -1,0 +1,47 @@
+.hero   {
+    height: 100vh;
+    min-height: 650px;
+    color: #fff;
+    position: relative;
+
+    @mixin background-parameters ($z-index: -10, $background: #1968B1) {
+        content:'';
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index:$z-index;
+        background: $background;
+    }
+    
+    &:before{
+        @include background-parameters;
+    }
+
+    &:after {
+        @include background-parameters(-9, url(../../img/decor/cc54b080a52d3a32105f47fa904b563a.jpg) left 80% / cover no-repeat);
+        opacity: .8;
+    }
+}
+
+.hero__container    {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.hero__title-section    {
+    width: 50%;
+}
+
+.hero__title-desc   {
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 60px;
+}
+
+.hero__icons-section    {
+    padding-bottom: 61px;
+}
