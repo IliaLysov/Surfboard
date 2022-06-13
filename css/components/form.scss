@@ -17,7 +17,7 @@
     }
 
     &:after {
-        @include background-parameters(-9, url(../../img/decor/cd318b28c9ca7b595ef1ba2ba8ffdac9.jpg) center / cover no-repeat);
+        @include background-parameters(-9, url(../img/decor/cd318b28c9ca7b595ef1ba2ba8ffdac9.jpg) center / cover no-repeat);
         opacity: .4;
     }
 }

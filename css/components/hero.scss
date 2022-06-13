@@ -20,7 +20,7 @@
     }
 
     &:after {
-        @include background-parameters(-9, url(../../img/decor/cc54b080a52d3a32105f47fa904b563a.jpg) left 80% / cover no-repeat);
+        @include background-parameters(-9, url(../img/decor/cc54b080a52d3a32105f47fa904b563a.jpg) left 80% / cover no-repeat);
         opacity: .8;
     }
 }
