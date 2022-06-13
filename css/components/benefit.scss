@@ -10,7 +10,7 @@
     background: #F2F5F4;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .benefit__icon  {
@@ -23,5 +23,11 @@
 }
 
 .benefit__title {
-    margin-bottom: 20px;
+    font-size: 27px;
+    margin-bottom: 22px;
+    color: $black;
+}
+
+.benefit__desc  {
+    line-height: 22px;
 }
