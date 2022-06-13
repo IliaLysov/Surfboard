@@ -203,18 +203,29 @@ p {
 .btn {
   font-size: 16px;
   font-weight: 800;
-  text-transform: uppercase;
-  padding: 21px 41px;
-  border-radius: 100px;
   line-height: 1;
   text-decoration: none;
+  border: none;
 }
-.btn--theme--white {
+.btn--theme--yellow {
   background: #FEDB3F;
   color: #000;
+  padding: 21px 41px;
+  border-radius: 100px;
+  text-transform: uppercase;
 }
-.btn--theme--white:hover {
+.btn--theme--yellow:hover {
   background: #FFD517;
+}
+.btn--theme--transparent {
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 22px;
+}
+.btn--theme--transparent:hover {
+  color: #FEDB3F;
 }
 
 .section {
@@ -409,6 +420,7 @@ p {
 
 .order-section {
   position: relative;
+  color: #fff;
 }
 .order-section:before {
   content: "";
@@ -433,8 +445,8 @@ p {
 }
 
 .order__section__title {
-  color: #fff;
   margin-bottom: 61px;
+  color: inherit;
 }
 
 .form {
@@ -459,19 +471,21 @@ p {
   display: flex;
   margin-bottom: 14px;
 }
+.form__row--margin {
+  margin-bottom: 28px;
+}
 
 .form__block {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 16px;
+  margin-right: 14px;
 }
 .form__block:last-child {
   margin-right: 0;
 }
 
 .form__title {
-  color: #fff;
   font-size: 18px;
 }
 
@@ -511,6 +525,14 @@ p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+.radio--checkbox {
+  margin-bottom: 44px;
 }
 .radio--checkbox .radio__visible {
   border-radius: 4px;
@@ -532,6 +554,7 @@ p {
   position: relative;
   border-radius: 50%;
   background: #fff;
+  margin-right: 10px;
 }
 .radio__visible::before {
   content: "";
@@ -547,6 +570,38 @@ p {
           transform: translate(-50%, -50%);
 }
 
-.radio__title {
-  color: #fff;
+.fixed-menu {
+  position: fixed;
+  top: 40%;
+  right: 3%;
+  z-index: 100;
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+.fixed-menu__item--active .fixed-menu__link {
+  border-color: #fff;
+}
+
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+.fixed-menu__link::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

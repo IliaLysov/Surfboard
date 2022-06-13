@@ -1,5 +1,6 @@
 .order-section  {
     position: relative;
+    color: #fff;
 
     @mixin background-parameters ($z-index: -10, $background: #2B2B2B) {
         content:'';
@@ -23,8 +24,8 @@
 }
 
 .order__section__title  {
-    color: #fff;
     margin-bottom: 61px;
+    color: inherit;
 }
 
 .form   {
@@ -43,11 +44,15 @@
 .form__row  {
     display: flex;
     margin-bottom: 14px;
+
+    &--margin   {
+        margin-bottom: 28px;
+    }
 }
 
 .form__block    {
     flex: 1;
-    margin-right: 16px;
+    margin-right: 14px;
 
     &:last-child    {
         margin-right: 0;
@@ -55,7 +60,6 @@
 }
 
 .form__title    {
-    color: #fff;
     font-size: 18px;
 }
 

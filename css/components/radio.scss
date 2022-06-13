@@ -2,8 +2,14 @@
     display: flex;
     cursor: pointer;
     user-select: none;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 16px;
 
     &--checkbox {
+        margin-bottom: 44px;
+
+
         .radio__visible {
             border-radius: 4px;
 
@@ -30,6 +36,7 @@
     position: relative;
     border-radius: 50%;
     background: #fff;
+    margin-right: 10px;
 
     &::before   {
         content: "";
@@ -43,8 +50,4 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-}
-
-.radio__title   {
-    color: #fff;
 }

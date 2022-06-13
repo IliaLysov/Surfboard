@@ -6,6 +6,10 @@ $body: #666;
 //colors
 $blue: #1968B1;
 
+//z-indexes
+
+$z-fixed-menu: 100;
+
 //normalize
 @import "https://necolas.github.io/normalize.css/latest/normalize.css";
 
@@ -27,3 +31,4 @@ $blue: #1968B1;
 @import "./components/interactive-avatar.scss";
 @import "./components/form.scss";
 @import "./components/radio.scss";
+@import "./components/fixed-menu.scss";
