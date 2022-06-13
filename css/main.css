@@ -271,7 +271,7 @@ p {
   position: relative;
 }
 .benefits__item::before {
-  content: url(../../img/decor/Combined\ shape\ 2204.svg);
+  content: url(../img/decor/Combined\ shape\ 2204.svg);
   position: absolute;
   top: 60px;
   right: 0;
