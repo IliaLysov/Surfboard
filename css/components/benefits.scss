@@ -10,9 +10,13 @@
     &::before   {
         content: url(../img/decor/3point.svg);
         position: absolute;
-        top: 60px;
+        top: rem(60px);
         right: 0;
         transform: translate(50%);
+
+        @include tablets    {
+            display: none;
+        }
     }
 
     &:first-child   {

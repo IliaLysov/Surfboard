@@ -4,18 +4,18 @@
 
 .benefit__image-wrapper {
     display: inline-block;
-    width: 128px;
-    height: 128px;
+    width: rem(128px);
+    height: rem(128px);
     position: relative;
     background: #F2F5F4;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
 }
 
 .benefit__icon  {
-    height: 68px;
-    width: 68px;
+    height: rem(68px);
+    width: rem(68px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,11 +23,11 @@
 }
 
 .benefit__title {
-    font-size: 27px;
-    margin-bottom: 22px;
+    font-size: rem(27px);
+    margin-bottom: rem(22px);
     color: $black;
 }
 
 .benefit__desc  {
-    line-height: 22px;
+    line-height: rem(22px);
 }

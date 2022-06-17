@@ -24,7 +24,7 @@
 }
 
 .order__section__title  {
-    margin-bottom: 61px;
+    margin-bottom: rem(61px);
     color: inherit;
 }
 
@@ -34,7 +34,7 @@
 
 .form__col  {
     flex: 1;
-    margin-right: 26px;
+    margin-right: rem(26px);
 
     &:last-child    {
         margin-right: 0;
@@ -43,16 +43,16 @@
 
 .form__row  {
     display: flex;
-    margin-bottom: 14px;
+    margin-bottom: rem(14px);
 
     &--margin   {
-        margin-bottom: 28px;
+        margin-bottom: rem(28px);
     }
 }
 
 .form__block    {
     flex: 1;
-    margin-right: 14px;
+    margin-right: rem(14px);
 
     &:last-child    {
         margin-right: 0;
@@ -60,17 +60,17 @@
 }
 
 .form__title    {
-    font-size: 18px;
+    font-size: rem(18px);
 }
 
 .form__input    {
     box-sizing: border-box;
     width: 100%;
     border: none;
-    padding: 18px 12px;
-    border-radius: 5px;
-    border: solid 3px transparent;
-    font-size: 14px;
+    padding: rem(18px) rem(12px);
+    border-radius: rem(5px);
+    border: solid rem(3px) transparent;
+    font-size: rem(14px);
 
     &:focus    {
         border-color: #FEDB3F;
@@ -78,7 +78,7 @@
     }
 
     &--textarea {
-        height: 152px;
+        height: rem(152px);
         resize: none;
     }
 }

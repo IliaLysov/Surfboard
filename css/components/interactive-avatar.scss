@@ -1,14 +1,14 @@
 .interactive-avatar     {
-    width: 74px;
-    height: 74px;
+    width: rem(74px);
+    height: rem(74px);
     border-radius: 50%;
     overflow: hidden;
     position: relative;
 
     &--active   {
-        height: 62px;
-        width: 62px;
-        border: 6px solid #FEDB3F;
+        height: rem(62px);
+        width: rem(62px);
+        border: rem(6px) solid #FEDB3F;
     }
 }
 

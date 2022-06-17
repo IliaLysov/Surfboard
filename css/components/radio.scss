@@ -3,15 +3,15 @@
     cursor: pointer;
     user-select: none;
     align-items: center;
-    margin-right: 20px;
-    margin-bottom: 16px;
+    margin-right: rem(20px);
+    margin-bottom: rem(16px);
 
     &--checkbox {
-        margin-bottom: 44px;
+        margin-bottom: rem(44px);
 
 
         .radio__visible {
-            border-radius: 4px;
+            border-radius: rem(4px);
 
             &::before   {
                 background: url(../../img/icons/checkmark.svg) center no-repeat;
@@ -31,17 +31,17 @@
 }
 
 .radio__visible {
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     position: relative;
     border-radius: 50%;
     background: #fff;
-    margin-right: 10px;
+    margin-right: rem(10px);
 
     &::before   {
         content: "";
-        width: 13px;
-        height: 13px;
+        width: rem(13px);
+        height: rem(13px);
         background: #FEDB3F;
         border-radius: 50%;
         position: absolute;

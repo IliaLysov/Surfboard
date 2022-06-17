@@ -1,12 +1,20 @@
 html    {
     font-family: "Alegreya Sans", sans-serif;
     scroll-behavior: smooth;
-    font-size: 18px;
+    font-size: $baseFontSize;
     color: #000;
     background: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $body;
+
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,27 +36,29 @@ ul li {
 }
 
 p {
-    margin-top: 0px;
+    margin-top: rem(0px);
 }
 
 .wrapper {
-    overflow: hidden;
+    position: relative;
+    width: 100%;
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
 }
 
 .container  {
+    width: 95%;
+    max-width: $containerWidth;
     margin: 0 auto;
-    max-width: 940px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .title {
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-    margin-bottom: 17px;
+    font-size: rem(48px);
+    line-height: rem(58px);
+    margin-bottom: rem(17px);
     text-transform: uppercase;
 }
 

@@ -3,11 +3,16 @@ $baseFontSize: 18px;
 $black: #292929;
 $body: #666;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $blue: #1968B1;
 
-//z-indexes
+@import "./media.scss";
 
+//z-indexes
 $z-fixed-menu: 100;
 
 //normalize
@@ -32,3 +37,4 @@ $z-fixed-menu: 100;
 @import "./components/form.scss";
 @import "./components/radio.scss";
 @import "./components/fixed-menu.scss";
+@import "./components/hamburger.scss";
