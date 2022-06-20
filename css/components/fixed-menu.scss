@@ -23,6 +23,10 @@
     display: block;
     position: relative;
 
+    @include tablets {
+        display: none;
+    }
+
     &::before   {
         content: "";
         display: block;

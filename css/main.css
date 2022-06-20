@@ -640,6 +640,11 @@ p {
   margin-bottom: 3.3888888889rem;
   color: inherit;
 }
+@media screen and (max-width: 768px) {
+  .order__section__title {
+    margin-bottom: 1.7777777778rem;
+  }
+}
 
 .form {
   display: -webkit-box;
@@ -717,6 +722,11 @@ p {
 .form__input--textarea {
   height: 8.4444444444rem;
   resize: none;
+}
+@media screen and (max-width: 768px) {
+  .form__input--textarea {
+    height: 4.5555555556rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .form__input {
@@ -851,6 +861,11 @@ p {
   border: 0.0555555556rem solid transparent;
   display: block;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .fixed-menu__link {
+    display: none;
+  }
 }
 .fixed-menu__link::before {
   content: "";

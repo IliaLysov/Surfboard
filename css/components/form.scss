@@ -26,6 +26,10 @@
 .order__section__title  {
     margin-bottom: rem(61px);
     color: inherit;
+
+    @include tablets {
+        margin-bottom: rem(32px);
+    }
 }
 
 .form   {
@@ -93,6 +97,10 @@
     &--textarea {
         height: rem(152px);
         resize: none;
+
+        @include tablets    {
+            height: rem(82px);
+        }
     }
 
     @include tablets {
