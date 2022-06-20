@@ -1,5 +1,18 @@
 .benefit    {
     text-align: center;
+
+    @include phones {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+.benefit__text  {
+
+    @include phones {
+        margin-left: rem(12px);
+    }
 }
 
 .benefit__image-wrapper {
@@ -11,6 +24,10 @@
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: rem(15px);
+
+    @include phones {
+        margin-bottom: 0;
+    }
 }
 
 .benefit__icon  {
@@ -26,8 +43,20 @@
     font-size: rem(27px);
     margin-bottom: rem(22px);
     color: $black;
+
+    @include phones {
+        margin-bottom: rem(10px);
+    }
 }
 
 .benefit__desc  {
     line-height: rem(22px);
+
+
+    @include phones {
+        padding-right: 5%;
+        & p {
+            margin-bottom: 0;
+        }
+    }
 }

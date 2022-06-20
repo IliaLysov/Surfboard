@@ -23,10 +23,18 @@
         @include background-parameters(-9, url(../img/decor/cc54b080a52d3a32105f47fa904b563a.jpg) left 80% / cover no-repeat);
         opacity: .8;
         @include tablets    {
-            @include background-parameters(-9, url(../img/decor/cc54b080a52d3a32105f47fa904b563a.jpg) no-repeat);
             background-position: 70% bottom;
             background-size: auto 105%;
             padding-top: 85px;
+            bottom: 0;
+            top: auto;
+            box-sizing: border-box;
+            background-clip: content-box;
+        }
+        @include phones    {
+            background-position: 70% bottom;
+            padding-top: 85px;
+            background-size: auto 100%;
             bottom: 0;
             top: auto;
             box-sizing: border-box;
@@ -61,11 +69,22 @@
     font-size: rem(21px);
     line-height: rem(25px);
     margin-bottom: rem(60px);
+    
+    @include phones {
+        padding: 0 30px;
+    }
 }
 
 .hero__icons-section    {
 
     @include tablets    {
         display: none;
+    }
+}
+
+.hero__title-section .hero__btn  {
+    
+    @include phones {
+        font-size: 19px;
     }
 }

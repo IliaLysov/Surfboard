@@ -4,11 +4,10 @@
     justify-content: space-between;
 }
 
-.phone-number.header__phone-number   {
-
-    @include tablets    {
-        display: none;
-    }
+.logo__icon{
+    width: rem(56px);
+    height: rem(40px);
+    fill: #fff;
 }
 
 .menu {
@@ -49,12 +48,19 @@
     font-size: rem(22px);
     display: flex;
     align-items: center;
+
+    &.header__phone-number {
+        @include tablets    {
+            display: none;
+        }
+    }
 }
 
-.phone-number__icon-elem    {
+.phone__icon    {
     width: rem(14px);
     height: rem(14px);
     margin-right: rem(6px);
+    fill: #fff;
 }
 
 .phone-number__text {

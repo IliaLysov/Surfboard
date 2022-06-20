@@ -10,4 +10,8 @@
     @include tablets {
         padding: 0 16%;
     }
+
+    @include phones {
+        padding: 0 2%;
+    }
 }
