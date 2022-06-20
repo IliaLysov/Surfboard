@@ -2,6 +2,10 @@
     background: #F8FAF9;
     padding: rem(42px);
     margin-bottom: rem(15px);
+    
+    @include tablets    {
+        padding: rem(42px) 5%;
+    }
 }
 
 .reviews__display-inner {
@@ -34,6 +38,10 @@
     flex: 1;
     margin-top: rem(28px);
     margin-left: rem(40px);
+    
+    @include tablets {
+        margin-left: 0;
+    }
 }
 
 .reviews__title {
