@@ -340,7 +340,7 @@ p {
 
 .section {
   height: 100vh;
-  min-height: 36.1111111111rem;
+  min-height: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1034,4 +1034,66 @@ p {
 }
 .social__icon:hover {
   fill: #292929;
+}
+
+.fullscreen-menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: #333537;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+.menu--vertical {
+  display: block;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 20vh;
+}
+.menu--vertical .menu__list {
+  height: 60vh;
+  max-height: 510px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.menu--vertical .menu__list .menu__item {
+  font-weight: 400;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+.menu--vertical .menu__list .menu__item:hover {
+  color: #666;
+}
+
+.fullscreen-menu__close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  fill: #fff;
+}
+.fullscreen-menu__close:hover {
+  fill: #666;
+}
+
+.close__icon {
+  height: 1.1111111111rem;
+  width: 1.1111111111rem;
 }

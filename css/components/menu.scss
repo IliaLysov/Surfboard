@@ -1,0 +1,51 @@
+.fullscreen-menu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: #333537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu--vertical {
+    display: block;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 20vh;
+    & .menu__list {
+        height: 60vh;
+        max-height: 510px;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        & .menu__item   {
+            font-weight: 400;
+            font-size: rem(36px);
+            color: #fff;
+            margin: 0;
+            &:hover {
+                color: #666;
+            }
+        }
+    }
+}
+
+.fullscreen-menu__close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    fill: #fff;
+
+    &:hover {
+        fill: #666;
+    }
+}
+
+.close__icon {
+    height: rem(20px);
+    width: rem(20px);
+}
