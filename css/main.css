@@ -1042,9 +1042,7 @@ p {
   width: 100%;
   top: 0;
   background: #333537;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
