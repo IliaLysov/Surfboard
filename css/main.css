@@ -1271,6 +1271,11 @@ p {
   display: flex;
   margin-bottom: 1.3333333333rem;
 }
+@media screen and (max-width: 768px) {
+  .common__fast-characteristics {
+    padding-left: 1.6666666667rem;
+  }
+}
 
 .fast-characteristic:last-child {
   margin-left: 2.4444444444rem;
@@ -1292,7 +1297,6 @@ p {
 @media screen and (max-width: 768px) {
   .common__order {
     width: 19rem;
-    padding-right: 1.6666666667rem;
   }
 }
 
@@ -1368,7 +1372,7 @@ p {
   width: 15.1666666667rem;
   height: 16.1666666667rem;
   border-radius: 4px;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 28px;
@@ -1380,9 +1384,8 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .characteristics__list:hover {
   display: -webkit-box;

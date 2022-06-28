@@ -46,15 +46,14 @@
     width: rem(273px);
     height: rem(291px);
     border-radius: 4px;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     padding: 28px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    opacity: .8;
-    transition: opacity .3s;
-
+    backdrop-filter: blur(5px);
+    
     &:hover {
         display: flex;
     }

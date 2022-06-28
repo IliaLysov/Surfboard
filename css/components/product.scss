@@ -130,6 +130,9 @@
     display: flex;
     margin-bottom: rem(24px);
 
+    @include tablets {
+        padding-left: rem(30px);
+    }
 }
 
 .fast-characteristic:last-child {
@@ -147,7 +150,6 @@
 
     @include tablets {
         width: rem(342px);
-        padding-right: rem(30px);
     }
 }
 
