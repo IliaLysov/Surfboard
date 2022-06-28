@@ -1095,3 +1095,199 @@ p {
   height: 1.1111111111rem;
   width: 1.1111111111rem;
 }
+
+.product-slider__arrows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arrow__icon-svg {
+  width: 0.75rem;
+  height: 1.5rem;
+}
+
+.product-section {
+  background-color: #F8FAF9;
+}
+
+.product__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 95%;
+}
+
+.product__image-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.product__image-wrapper .product__image {
+  width: 8.3333333333rem;
+  height: 29.7222222222rem;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.product__description {
+  max-width: 374px;
+}
+
+.product__title {
+  color: #000;
+  font-size: 2rem;
+  margin-top: 2.8888888889rem;
+  margin-bottom: 1.3333333333rem;
+}
+
+.common__text {
+  margin-bottom: 1.3333333333rem;
+}
+
+.common__fast-characteristics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fast-characteristic:last-child {
+  margin-left: 2.4444444444rem;
+}
+
+.fast-characteristic__value {
+  color: #000;
+  font-weight: 700;
+}
+
+.common__fast-characteristics {
+  margin-bottom: 1.3333333333rem;
+}
+
+.common__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product__price {
+  color: #000;
+  font-weight: 300;
+  font-size: 3.3333333333rem;
+}
+
+.product__characteristics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.characteristics__icon-wrapper {
+  height: 5.0555555556rem;
+  width: 5.0555555556rem;
+  border-radius: 4px;
+  background-color: #3A587E;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.characteristics__icon-wrapper:hover {
+  cursor: pointer;
+  background-color: #3465A3;
+}
+
+.characteristics__icon {
+  height: 2.1111111111rem;
+  width: 2.1111111111rem;
+  fill: #fff;
+  margin-bottom: 0.3888888889rem;
+}
+
+.characteristics__icon-name {
+  font-size: 0.7777777778rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.characteristics__list {
+  position: absolute;
+  margin-left: 5.0555555556rem;
+  width: 15.1666666667rem;
+  height: 16.1666666667rem;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 0.8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.charasteristics__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8888888889rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+}
+
+.charasteristic__icon {
+  height: 1.3333333333rem;
+  width: 1.3333333333rem;
+}
+
+.characteristic__name {
+  margin-left: 0.8333333333rem;
+  font-weight: 500;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.characteristic__value {
+  font-weight: 400;
+}
