@@ -1,10 +1,20 @@
 .product-slider__arrows {
     position: absolute;
     width: 100%;
-    height: 100%;
+    top: 48%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
+    @include tablets {
+        left: 17.5%;
+        width: 60%;
+        top: 32%;
+    }
+
+    @include phones {
+        left: 0;
+        width: 100%;
+    }
 }
 
 .arrow__icon-svg    {
@@ -18,11 +28,20 @@
 
 .product-section    {
     background-color: #F8FAF9;
+    position: relative;
+    height: fit-content;
 }
+
 
 .product__container {
     display: flex;
     max-width: 95%;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        padding: rem(82px) 0;
+    }
 }
 
 .product__image-wrapper {
@@ -30,16 +49,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(../img/decor/deck-background.svg) center no-repeat;
+
+    @include tablets {
+        background-size: rem(306px);
+        width: 90%;
+    }
+
+    @include phones {
+        background-size: rem(243px);
+
+    }
 
     & .product__image   {
         width: rem(150px);
         height: rem(535px);
         transform: rotate(30deg);
+        z-index: 5;
+
+        @include tablets {
+            width: rem(116px);
+            height: rem(414px);
+        }
+
+        @include phones {
+            width: rem(92px);
+            height: rem(329px);
+        }
     }
 }
 
 .product__description   {
     max-width: 374px;
+    z-index: 10;
+    
+    @include tablets {
+        max-width: rem(528px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
 }
 
 .product__title {
@@ -47,14 +98,38 @@
     font-size: rem(36px);
     margin-top: rem(52px);
     margin-bottom: rem(24px);
+
+    @include tablets {
+        font-size: rem(30px);
+        margin-top: 0;
+        margin-bottom: rem(14px);
+    }
+}
+
+.product__common    {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .common__text   {
     margin-bottom: rem(24px);
+
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        max-width: rem(380px);
+    }
 }
 
 .common__fast-characteristics   {
     display: flex;
+    margin-bottom: rem(24px);
+
 }
 
 .fast-characteristic:last-child {
@@ -66,17 +141,24 @@
     font-weight: 700;
 }
 
-.common__fast-characteristics   {
-    margin-bottom: rem(24px);
-}
-
 .common__order  {
     display: flex;
     justify-content: space-between;
+
+    @include tablets {
+        width: rem(342px);
+        padding-right: rem(30px);
+    }
 }
 
 .product__price {
     color: #000;
     font-weight: 300;
     font-size: rem(60px);
+}
+
+.order__btn {
+    font-size: rem(16px);
+    line-height: rem(18px);
+    margin: auto 0;
 }

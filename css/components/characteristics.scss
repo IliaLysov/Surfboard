@@ -1,5 +1,9 @@
 .product__characteristics   {
     display: flex;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .characteristics__icon-wrapper  {
@@ -16,6 +20,10 @@
     &:hover {
         cursor: pointer;
         background-color: #3465A3;
+
+        & + .characteristics__list {
+            display: flex;
+        }
     }
 }
 
@@ -39,12 +47,17 @@
     height: rem(291px);
     border-radius: 4px;
     background-color: #fff;
-    opacity: 0.8;
     box-sizing: border-box;
     padding: 28px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
+    opacity: .8;
+    transition: opacity .3s;
+
+    &:hover {
+        display: flex;
+    }
 }
 
 .charasteristics__item  {
