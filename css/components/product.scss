@@ -6,7 +6,7 @@
     justify-content: space-between;
 
     @include tablets {
-        left: 17.5%;
+        left: 20%;
         width: 60%;
         top: 32%;
     }
@@ -29,13 +29,16 @@
 .product-section    {
     background-color: #F8FAF9;
     position: relative;
-    height: fit-content;
-}
 
+    @include tablets {
+        min-height: rem(816px);
+    }
+}
 
 .product__container {
     display: flex;
     max-width: 95%;
+    margin: 0 auto;
 
     @include tablets {
         flex-direction: column;

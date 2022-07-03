@@ -5,10 +5,16 @@
     overflow: hidden;
     position: relative;
 
-    &--active   {
-        height: rem(62px);
-        width: rem(62px);
+    @mixin active-avatar    {
         border: rem(6px) solid #FEDB3F;
+    }
+
+    &:hover {
+        @include active-avatar()
+    }
+
+    &--active   {
+        @include active-avatar()
     }
 }
 
@@ -18,12 +24,9 @@
     left: 0;
     bottom: 0;
     right: 0;
-    display: block;
 }
 
 .interactive-avatar__img    {
-    display: block;
     height: 100%;
     width: 100%;
-    object-fit: cover;
 }
