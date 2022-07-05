@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surfboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -143,7 +148,7 @@
                             </a>
                             <a href="#" class="product-slider__arrow product-slider__arrow--direction--next">
                                 <svg class="arrow__icon-svg">
-                                    <use xlink:href="./img/icons/icons-sprite.svg#arrow-next"></use>
+                                    <use xlink:href="./img/icons/icons-sprite.svg#arrow"></use>
                                 </svg>
                             </a>
                         </div>
@@ -215,6 +220,79 @@
                                             </div>
                                             <div class="common__order">
                                                 <div class="product__price">7000 ₽</div>
+                                                <button class="btn order__btn btn--theme--yellow">Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products__item product">
+                                <div class="product__container">
+                                    <div class="product__image-wrapper">
+                                        <img src="./img/content/deck-2.png" alt="deck-image" class="product__image">
+                                    </div>
+                                    <div class="product__description">
+                                        <div class="product__characteristics characteristics">
+                                            <div class="characteristics__icon-wrapper">
+                                                <svg class="characteristics__icon">
+                                                    <use xlink:href="./img/icons/icons-sprite.svg#characteristics"></use>
+                                                </svg>
+                                                <div class="characteristics__icon-name">Параметры</div>
+                                            </div>
+                                            <ul class="characteristics__list">
+                                                <li class="charasteristics__item charasteristic">
+                                                    <svg class="charasteristic__icon">
+                                                        <use xlink:href="./img/icons/icons-sprite.svg#length"></use>
+                                                    </svg>
+                                                    <div class="characteristic__name">Длина доски</div>
+                                                    <div class="characteristic__value">от 1,5 м</div>
+                                                </li>
+                                                <li class="charasteristics__item charasteristic">
+                                                    <svg class="charasteristic__icon">
+                                                        <use xlink:href="./img/icons/icons-sprite.svg#width"></use>
+                                                    </svg>
+                                                    <div class="characteristic__name">Ширина доски</div>
+                                                    <div class="characteristic__value">от 30 см</div>
+                                                </li>
+                                                <li class="charasteristics__item charasteristic">
+                                                    <svg class="charasteristic__icon">
+                                                        <use xlink:href="./img/icons/icons-sprite.svg#thickness"></use>
+                                                    </svg>
+                                                    <div class="characteristic__name">Толщина</div>
+                                                    <div class="characteristic__value">8 см</div>
+                                                </li>
+                                                <li class="charasteristics__item charasteristic">
+                                                    <svg class="charasteristic__icon">
+                                                        <use xlink:href="./img/icons/icons-sprite.svg#life-time"></use>
+                                                    </svg>
+                                                    <div class="characteristic__name">Срок службы</div>
+                                                    <div class="characteristic__value">5 лет</div>
+                                                </li>
+                                                <li class="charasteristics__item charasteristic">
+                                                    <svg class="charasteristic__icon">
+                                                        <use xlink:href="./img/icons/icons-sprite.svg#weight"></use>
+                                                    </svg>
+                                                    <div class="characteristic__name">Вес</div>
+                                                    <div class="characteristic__value">7-8 кг</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h3 class="product__title title">Шортборд</h3>
+                                        <div class="product__common common">
+                                            <p class="common__text">Самые быстрые доски для профессионалов. Размеры шортбордов позволяют быстро набирать скорость, делать различные трюки на волне, включая резкие повороты и развороты, флоатеры (проезды по самому гребню волны), различные прыжки с вращениями или без, а также катание в трубах.                                                
+                                            </p>
+                                            <div class="common__fast-characteristics">
+                                                <div class="fast-characteristic product__length">
+                                                    <div class="fast-characteristic__name">Длина доски</div>
+                                                    <div class="fast-characteristic__value">от 1,5 метров</div>
+                                                </div>
+                                                <div class="fast-characteristic product__width">
+                                                    <div class="fast-characteristic__name">Ширина доски</div>
+                                                    <div class="fast-characteristic__value">от 30 сантиметров</div>
+                                                </div>
+                                            </div>
+                                            <div class="common__order">
+                                                <div class="product__price">12000 ₽</div>
                                                 <button class="btn order__btn btn--theme--yellow">Заказать</button>
                                             </div>
                                         </div>
@@ -405,39 +483,40 @@
                 <div class="container">
                     <h2 class="title section__title order__section__title">Закажите доставку</h2>
                     <form class="form">
+                        <input type="hidden" name="to" value="some@gmail.com">
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="name" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="phone" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Улица</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="street" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Дом</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="home" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Корпус</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="part" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Квартира</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="appartment" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Этаж</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="floor" class="form__input">
                                 </label>
                             </div>
                         </div>
@@ -445,7 +524,7 @@
                             <div class="form__row form__row--margin">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea name="comment" class="form__input form__input--textarea"></textarea>
                                 </label>
                             </div>
                             <div class="form__controls">
@@ -560,10 +639,26 @@
             </ul>
         </nav>
     </div>
+    <div id="modal" class="modal">
+        <div class="container">
+            <div class="modal__container">
+                <div class="modal__content">
+                    Сообщение отправлено
+                </div>
+                <div class="modal__button-container">
+                    <a href="#" class="btn app-close-modal btn--theme--yellow">Закрыть</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./scripts/slider.js"></script>
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/tabs.js"></script>
     <script src="./scripts/acco.js"></script>
+    <script src="./scripts/modal.js"></script>
 </body>
 </html>
