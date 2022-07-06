@@ -1350,7 +1350,8 @@ p {
 }
 @media screen and (max-width: 480px) {
   .product__price {
-    margin-right: 1.8333333333rem;
+    font-size: 2.7777777778rem;
+    margin-right: 1.1111111111rem;
   }
 }
 
@@ -1477,7 +1478,7 @@ p {
     min-height: 100vh;
   }
   .team-section .container {
-    padding: 100px;
+    padding: 50px;
   }
 }
 

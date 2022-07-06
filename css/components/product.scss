@@ -184,7 +184,8 @@
         margin-right: rem(44px);
     }
     @include phones {
-        margin-right: rem(33px);
+        font-size: rem(50px);
+        margin-right: rem(20px);
     }
 }
 
