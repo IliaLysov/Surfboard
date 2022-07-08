@@ -81,13 +81,11 @@ p {
   cursor: pointer;
 }
 
-.hero {
-  height: 100vh;
-  min-height: 36.1111111111rem;
+.hero-section {
   color: #fff;
   position: relative;
 }
-.hero:before {
+.hero-section:before {
   content: '';
   position: absolute;
   left: 0;
@@ -97,7 +95,7 @@ p {
   z-index: -10;
   background: #1968B1;
 }
-.hero:after {
+.hero-section:after {
   content: '';
   position: absolute;
   left: 0;
@@ -109,7 +107,7 @@ p {
   opacity: .8;
 }
 @media screen and (max-width: 768px) {
-  .hero:after {
+  .hero-section:after {
     background-position: 70% bottom;
     background-size: auto 105%;
     padding-top: 85px;
@@ -121,7 +119,7 @@ p {
   }
 }
 @media screen and (max-width: 480px) {
-  .hero:after {
+  .hero-section:after {
     background-position: 70% bottom;
     padding-top: 85px;
     background-size: auto 100%;
@@ -171,6 +169,13 @@ p {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__main-title {
+    font-size: 8vmin;
+    line-height: 10vmin;
   }
 }
 
@@ -385,6 +390,18 @@ p {
 @media screen and (max-width: 480px) {
   .headline__subtitle {
     padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .benefits-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 100vh;
+  }
+  .benefits-section .container {
+    padding: 50px 0;
   }
 }
 
@@ -641,6 +658,17 @@ p {
 .order-section {
   position: relative;
   color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .order-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 100vh;
+  }
+  .order-section .container {
+    padding: 50px 0;
+  }
 }
 .order-section:before {
   content: '';
@@ -1542,6 +1570,12 @@ p {
     margin-right: 0;
   }
 }
+.team__item.active .team__title::after {
+  border-top-color: transparent;
+  border-bottom-color: black;
+  border-bottom-width: 7px;
+  border-top-width: 0px;
+}
 
 .team__member {
   margin-bottom: 1.1666666667rem;
@@ -1557,6 +1591,22 @@ p {
   border: none;
   background: none;
   cursor: pointer;
+}
+.team__title::after {
+  content: "";
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 30px solid transparent;
+  width: 0px;
+  height: 0px;
+  border-top-color: black;
+  border-right-width: 4px;
+  border-bottom-width: 0;
+  border-top-width: 7px;
+  border-left-width: 4px;
+  -webkit-transition: border-color .3s;
+  transition: border-color .3s;
 }
 
 .team__content {

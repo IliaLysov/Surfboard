@@ -1,6 +1,4 @@
-.hero   {
-    height: 100vh;
-    min-height: rem(650px);
+.hero-section   {
     color: #fff;
     position: relative;
 
@@ -62,6 +60,13 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+}
+
+.hero__main-title   {
+    @include phones {
+        font-size: 8vmin;
+        line-height: 10vmin;
     }
 }
 

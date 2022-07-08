@@ -1,3 +1,14 @@
+.benefits-section {
+    @include tablets {
+
+        & .container    {
+            padding: 50px 0;
+        }
+        height: fit-content;
+        min-height: 100vh;
+    }
+}
+
 .benefits   {
     display: flex;
 
