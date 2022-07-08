@@ -1573,8 +1573,8 @@ p {
 .team__item.active .team__title::after {
   border-top-color: transparent;
   border-bottom-color: black;
-  border-bottom-width: 7px;
-  border-top-width: 0px;
+  border-bottom-width: 0.3888888889rem;
+  border-top-width: 0;
 }
 
 .team__member {
@@ -1595,16 +1595,16 @@ p {
 .team__title::after {
   content: "";
   position: absolute;
-  margin-top: 10px;
-  margin-left: 10px;
-  border: 30px solid transparent;
+  margin-top: 0.5555555556rem;
+  margin-left: 0.5555555556rem;
+  border: 1.6666666667rem solid transparent;
   width: 0px;
   height: 0px;
   border-top-color: black;
-  border-right-width: 4px;
+  border-right-width: 0.2222222222rem;
   border-bottom-width: 0;
-  border-top-width: 7px;
-  border-left-width: 4px;
+  border-top-width: 0.3888888889rem;
+  border-left-width: 0.2222222222rem;
   -webkit-transition: border-color .3s;
   transition: border-color .3s;
 }
