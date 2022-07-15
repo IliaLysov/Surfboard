@@ -1,0 +1,139 @@
+.team-section   {
+
+    @include tablets {
+
+        & .container    {
+            padding: rem(40px);
+        }
+        height: fit-content;
+        min-height: 100vh;
+    }
+}
+
+.team {
+    margin-top: rem(53px);
+
+    
+    &--version  {
+        &--desktop  {
+            display: flex;
+            & .team__content    {
+                position: absolute;
+                top: 100%;
+            }
+            
+            @include tablets {
+                display: none;
+            }
+        }
+
+        &--mobile   {
+            display: none;
+            margin-top: rem(33px);
+
+            @include tablets {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            & .team__item {
+                margin-bottom: rem(8px);
+            }
+        }
+    }
+
+
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-right: rem(20px);
+
+    &:last-child    {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+
+    &.active    {
+        & .team__title::after {
+            border-top-color: transparent;
+            border-bottom-color: black;
+            border-bottom-width: rem(7px);
+            border-top-width: 0;
+        }
+    }
+}
+
+.team__member   {
+    margin-bottom: rem(21px);
+
+    @include phones {
+        margin-bottom: rem(17px);
+    }
+}
+
+.team__member__img {
+    @include phones {
+        height: rem(180px);
+        width: rem(138px);
+    }
+}
+
+.team__title {
+    padding: 0;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: rem(21px);
+    line-height: rem(25px);
+    margin-bottom: rem(8px);
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+        margin-top: rem(10px);
+        margin-left: rem(10px);
+        border: rem(30px) solid transparent;
+        width: 0px;
+        height: 0px;
+        border-top-color: black;
+        border-right-width: rem(4px);
+        border-bottom-width: 0;
+        border-top-width: rem(7px);
+        border-left-width: rem(4px);
+        transition: border-color .3s;
+    }
+}
+
+.team__content  {
+    overflow: hidden;
+    transition: height .3s;
+    height: 0;
+
+    &-block {
+        padding-bottom: rem(5px);
+    }
+
+    &-title    {
+        margin-bottom: rem(4px);
+        line-height: rem(21px);
+        color: black;
+    }
+
+    &-description  {
+        color: #666;
+        font-weight: 300;
+        width: rem(220px);
+        margin: 0 auto;
+    }
+}

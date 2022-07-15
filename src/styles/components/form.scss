@@ -1,0 +1,143 @@
+.order-section  {
+    position: relative;
+    color: #fff;
+
+    @include tablets {
+
+        & .container    {
+            padding: 50px 0;
+        }
+        height: fit-content;
+        min-height: 100vh;
+    }
+
+    @mixin background-parameters ($z-index: -10, $background: #2B2B2B) {
+        content:'';
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index:$z-index;
+        background: $background;
+    }
+    
+    &:before{
+        @include background-parameters;
+    }
+
+    &:after {
+        @include background-parameters(-9, url(./img/decor/cd318b28c9ca7b595ef1ba2ba8ffdac9.jpg) center / cover no-repeat);
+        opacity: .4;
+    }
+}
+
+.order__section__title  {
+    margin-bottom: rem(61px);
+    color: inherit;
+
+    @include tablets {
+        margin-bottom: rem(32px);
+    }
+}
+
+.form   {
+    display: flex;
+
+    @include tablets    {
+        flex-direction: column;
+        padding: 0 15%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__col  {
+    flex: 1;
+    margin-right: rem(26px);
+
+    &:last-child    {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.form__row  {
+    display: flex;
+    margin-bottom: rem(14px);
+
+    &--margin   {
+        margin-bottom: rem(28px);
+    }
+}
+
+.form__block    {
+    flex: 1;
+    margin-right: rem(14px);
+
+    &:last-child    {
+        margin-right: 0;
+    }
+}
+
+.form__title    {
+    font-size: rem(18px);
+}
+
+.form__input    {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: rem(18px) rem(12px);
+    border-radius: rem(5px);
+    border: solid rem(3px) transparent;
+    font-size: rem(14px);
+
+    &:focus    {
+        border-color: #FEDB3F;
+        outline: none;
+    }
+
+    &--textarea {
+        height: rem(152px);
+        resize: none;
+
+        @include tablets    {
+            height: rem(82px);
+        }
+    }
+
+    @include tablets {
+        padding: rem(8px) rem(12px);
+    }
+
+    @include phones {
+        padding: rem(8px) rem(12px);
+    }
+}
+
+.form__error    {
+    border-color: red;
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.form__btns {
+
+    @include tablets    {
+        display: flex;
+        justify-content: center;
+    }
+}

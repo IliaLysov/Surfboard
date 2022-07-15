@@ -1,0 +1,23 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+$black: #292929;
+$body: #666;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//colors
+$blue: #1968B1;
+
+@import "./media.scss";
+
+//z-indexes
+$z-fixed-menu: 100;
+
+//setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
+@import "./layout.scss";
+
+//components
+@import "./components/*.scss";

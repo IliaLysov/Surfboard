@@ -1,0 +1,11 @@
+.section    {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section__title {
+    text-align: center;
+    color: $black;
+}
