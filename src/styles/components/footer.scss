@@ -16,3 +16,9 @@
         flex-direction: column;
     }
 }
+
+.phone-number {
+    & .phone__icon--black {
+        fill: black;
+    }
+}

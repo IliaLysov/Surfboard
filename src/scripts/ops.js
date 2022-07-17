@@ -40,7 +40,7 @@ resetActiveClassForItem = (items, itemEq, activeClass) => {
 
 const performTransition = sectionEq => {
 
-    if (inScroll) return;
+    if (inScroll || document.body.classList.contains('locked')) return;
 
     const transitionOver = 1000;
     const mouseInertionalOver = 300;
@@ -123,6 +123,7 @@ $("[data-scroll-to]").click(e => {
     const $this = $(e.currentTarget);
     const target = $this.attr("data-scroll-to");
     const reqSection = $(`[data-section-id=${target}]`);
+    document.body.classList.remove('locked');
 
     performTransition(reqSection.index());
 });
@@ -138,7 +139,9 @@ if (isMobile) {
             if (direction == "up") scrollDirection = "next";
             if (direction == "down") scrollDirection = "prev";
     
-            scroller[scrollDirection]();
+            if (scrollDirection) {
+                scroller[scrollDirection]();
+            }
         },
     });
 }

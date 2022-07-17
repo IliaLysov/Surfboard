@@ -545,8 +545,11 @@
                   <div class="player-section__container">
                     <div class="player">
                       <div class="player__wrapper">
-                        <div id="yt-player" class="player__elem"></div>
-                        <div class="player__splash">
+                        <video controls class="player__elem">
+                            <source src="./video/How to Pop Up on a Surfboard _ Beginner Take Off Technique.webm" type="video/webm">
+                            <source src="./video/How to Pop Up on a Surfboard _ Beginner Take Off Technique.mp4" type="video/mp4">
+                        </video>
+                        <!-- <div class="player__splash">
                             <button class="btn play-button">
                                 <svg class="play-button__icon">
                                     <use xlink:href="./img/icons/icons-sprite.svg#play-button"></use>
@@ -573,7 +576,7 @@
                           <span class="player__duration-completed">0:00</span> :
                           <span class="player__duration-estimate">0:00</span>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -716,7 +719,7 @@
             <li class="fixed-menu__item"><a href="" data-scroll-to="product-menu" class="fixed-menu__link"></a></li>
             <li class="fixed-menu__item"><a href="" data-scroll-to="review" class="fixed-menu__link"></a></li>
             <li class="fixed-menu__item"><a href="" data-scroll-to="player" class="fixed-menu__link"></a></li>
-            <li class="fixed-menu__item"><a href="" class="fixed-menu__link"></a></li>
+            <li class="fixed-menu__item"><a href="" data-scroll-to="order" class="fixed-menu__link"></a></li>
             <li class="fixed-menu__item"><a href="" data-scroll-to="map" class="fixed-menu__link"></a></li>
         </ul>
     </nav>
@@ -751,12 +754,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
     <script src="./main.min.js"></script>
 </body>
 </html>

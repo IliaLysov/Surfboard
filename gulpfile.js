@@ -1,6 +1,6 @@
 const {src, dest, task, series, watch, parallel} = require('gulp');
 const clean = require('gulp-clean');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('node-sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -86,6 +86,13 @@ task('icons', () => {
     .pipe(dest(`${DOCS_PATH}/img`));
 })
 
+task('video', () => {
+    return src(`${SRC_PATH}/video/*`)
+
+    .pipe(dest(`${DIST_PATH}/video`))
+    .pipe(dest(`${DOCS_PATH}/video`));
+})
+
 // task('images', () => {
 //     return src(`${SRC_PATH}/images/*`)
 //     .pipe(dest(`${DIST_PATH}/images`));
@@ -107,6 +114,6 @@ task('watch', () => {
     watch('./src/images/icons/*.svg', series('icons'));
 })
 
-task("default", series("clean", parallel("copy:html", "styles", "scripts", "icons"), parallel("watch", "server")));
+task("default", series("clean", parallel("copy:html", "styles", "scripts", "icons", "video"), parallel("watch", "server")));
 
-task("build", series("clean", parallel("copy:html", "styles", "scripts", "icons")));
+task("build", series("clean", parallel("copy:html", "styles", "scripts", "icons", "video")));

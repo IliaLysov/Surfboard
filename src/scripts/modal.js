@@ -29,6 +29,7 @@ $('.form').submit(e => {
     const isValid = validateField(form, [name, phone, comment, to]);
 
     if (isValid) {
+        document.body.classList.add('locked');
         const request = $.ajax({
             url: "https://webdev-api.loftschool.com/sendmail",
             method: "post",
@@ -61,6 +62,8 @@ $('.form').submit(e => {
 
 $('.app-close-modal').click(e => {
     e.preventDefault();
+
+    document.body.classList.remove('locked');
 
     $.fancybox.close();
 })
