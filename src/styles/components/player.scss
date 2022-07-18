@@ -3,9 +3,10 @@
 }
 
 .player-section__container  {
-    height: 390px;
-    width: 660px;
+    height: rem(390px);
+    width: rem(660px);
     margin: 0 auto;
+    position: relative;
 
     @include tablets {
         height: rem(351.57px);
@@ -16,6 +17,11 @@
         height: rem(233.2px);
         width: rem(394px);
     }
+}
+
+.player__elem  {
+    position: relative;
+    width: 100%;
 }
 
 .player__start  {
@@ -29,6 +35,61 @@
     border-top-width: rem(8px);
     border-bottom-width: rem(8px);
     padding: 0;
+
+    @include phones {
+        position: relative;
+        background: none;
+        border: rem(9px) solid transparent;
+        width: 0;
+        height: 0;
+        border-left-color: white;
+        border-right-width: 0;
+        border-top-width: rem(6px);
+        border-bottom-width: rem(6px);
+        padding: 0;
+    }
+
+    &.active {
+        width: rem(14px);
+        height: rem(16px);
+        border: none;
+
+        &::after,
+        &::before   {
+            content: "";
+            display: block;
+            position: absolute;
+            width: rem(5px);
+            top: 0;
+            bottom: 0;
+            background: white;
+        }
+
+        @include phones {
+            width: rem(9px);
+            height: rem(10px);
+            border: none;
+
+            &::after,
+            &::before   {
+                content: "";
+                display: block;
+                position: absolute;
+                width: rem(3px);
+                top: 0;
+                bottom: 0;
+                background: white;
+            }
+        }
+
+        &::after {
+            right: 0;
+        }
+
+        &::before {
+            left: 0;
+        }
+    }
 }
 
 
@@ -40,33 +101,6 @@
 
     &.active .player__splash    {
         display: none;
-    }
-
-    &.paused {
-        .player__start {
-            width: rem(14px);
-            height: rem(16px);
-            border: none;
-
-            &::after,
-            &::before   {
-                content: "";
-                display: block;
-                position: absolute;
-                width: rem(5px);
-                top: 0;
-                bottom: 0;
-                background: white;
-            }
-
-            &::after {
-                right: 0;
-            }
-
-            &::before {
-                left: 0;
-            }
-        }
     }
 }
 
@@ -109,15 +143,16 @@
 
     @include phones {
         padding: 0 rem(10px);
+        height: rem(21px);
     }
 }
 
 .player__playback   {
-    height: rem(16px);
     width: rem(442px);
     position: relative;
     height: rem(4px);
     border-radius: rem(2px);
+    background: linear-gradient(90deg, yellow 0%, #626262 0%);
 
     @include tablets {
         width: rem(398px);
@@ -126,16 +161,16 @@
         width: rem(264px);
     }
     // &::before {
-    //     content: "";
-    //     height: rem(4px);
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 0;
-    //     right: 0;
-    //     background: linear-gradient(90deg, yellow 0%, #626262 0%);
-    //     display: block;
-    //     transform: translateY(-50%);
-    //     border-radius: rem(2px);
+    //      content: "";
+    //      height: rem(4px);
+    //      position: absolute;
+    //      top: 50%;
+    //      left: 0;
+    //      right: 0;
+    //      background: linear-gradient(90deg, yellow 0%, #626262 0%);
+    //      display: block;
+    //      transform: translateY(-50%);
+    //      border-radius: rem(2px);
     // }
 }
 
@@ -161,26 +196,57 @@
     align-items: center;
 
     &-scale {
-        height: rem(16px);
         width: rem(58px);
         position: relative;
         height: rem(4px);
         border-radius: rem(2px);
-        background: linear-gradient(90deg, yellow 20%, #626262 0%);
+        background: linear-gradient(90deg, yellow 100%, #626262 0%);
 
-        &-button {
-            position: absolute;
-            background: yellow;
-            border-radius: rem(50px);
-            border: none;
-            width: rem(12px);
-            height: rem(12px);
-            padding: 0;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            left: 0%;
-        }
+        // background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+        // border: solid 1px #82CFD0;
+        // // border-radius: 8px;
+        // // height: 7px;
+        // // width: 356px;
+        // outline: none;
+        // transition: background 450ms ease-in;
+
+        // &-button {
+        //     position: absolute;
+        //     background: yellow;
+        //     border-radius: rem(50px);
+        //     border: none;
+        //     width: rem(12px);
+        //     height: rem(12px);
+        //     padding: 0;
+        //     top: 50%;
+        //     transform: translate(-50%, -50%);
+        //     left: 0%;
+        // }
     }
+}
+
+input[type='range']{
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, yellow 100%, #626262 0%);
+    margin: 0;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: rem(4px);
+    background: none;
+    cursor: pointer;
+    border-radius: rem(2px);
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: rem(50px);
+    width: rem(12px);
+    height: rem(12px);
+    background: yellow;
+    cursor: pointer;
+    transform: translate(0, rem(-4px));
+
 }
 
 .volume-switch  {

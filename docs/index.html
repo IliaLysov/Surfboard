@@ -545,7 +545,7 @@
                   <div class="player-section__container">
                     <div class="player">
                       <div class="player__wrapper">
-                        <video controls class="player__elem">
+                        <video class="player__elem" poster="./img/decor/Splash.png">
                             <source src="./video/How to Pop Up on a Surfboard _ Beginner Take Off Technique.webm" type="video/webm">
                             <source src="./video/How to Pop Up on a Surfboard _ Beginner Take Off Technique.mp4" type="video/mp4">
                         </video>
@@ -555,28 +555,23 @@
                                     <use xlink:href="./img/icons/icons-sprite.svg#play-button"></use>
                                 </svg>
                             </button>
+                        </div> -->
+                        <div class="player__controls">
+                          <button class="btn player__start"></button>
+                          <!-- <input type="range" class="player__playback" min="0" max="1" step="0.01" value="1"> -->
+                          <div class="player__playback">
+                            <button class="btn player__playback-button"></button>
+                          </div>
+                          <div class="player__volume">
+                              <button class="btn player__volume-switch volume-switch">
+                                  <svg class="volume-switch__icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#volume-switch"></use>
+                                  </svg>
+                              </button>
+                              <input type="range" class="player__volume-scale" min="0" max="1" step="0.01" value="1">
+                          </div>
                         </div>
                       </div>
-                      <div class="player__controls">
-                        <button class="btn player__start"></button>
-                        <div class="player__playback">
-                          <button class="btn player__playback-button"></button>
-                        </div>
-                        <div class="player__volume">
-                            <button class="btn player__volume-switch volume-switch">
-                                <svg class="volume-switch__icon">
-                                    <use xlink:href="./img/icons/icons-sprite.svg#volume-switch"></use>
-                                </svg>
-                            </button>
-                            <div class="player__volume-scale">
-                                <button class="btn player__volume-scale-button"></button>
-                            </div>
-                        </div>
-                        <div class="player__duration">
-                          <span class="player__duration-completed">0:00</span> :
-                          <span class="player__duration-estimate">0:00</span>
-                        </div>
-                      </div> -->
                     </div>
                   </div>
                 </div>
