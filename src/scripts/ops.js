@@ -69,6 +69,7 @@ const viewportScroller = () => {
     const prevSection = activeSection.prev();
 
     return {
+        ""(){},
         next() {
             if (nextSection.length) {
                 performTransition(nextSection.index());
@@ -139,9 +140,7 @@ if (isMobile) {
             if (direction == "up") scrollDirection = "next";
             if (direction == "down") scrollDirection = "prev";
     
-            if (scrollDirection) {
-                scroller[scrollDirection]();
-            }
+            scroller[scrollDirection]();
         },
     });
 }
