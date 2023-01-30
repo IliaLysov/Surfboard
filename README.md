@@ -1,8 +1,12 @@
 # Surfboard landing page
 
-**[Application](https://lisovilya.github.io/Surfboard/)**
+**[Page](https://lisovilya.github.io/Surfboard/)**
 
 This is a responsive landing page layout for a surfboard company.
+
+## Description
+
+In this project, a landing page with an adaptive layout is implemented. An interactive map is connected, SVG icons are combined into a single sprite, a video player based on the HTML5 Video API is implemented, One Page Scroll is implemented.
 
 ## What is inside
 
