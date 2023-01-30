@@ -1,4 +1,6 @@
-# Surfboard
+# Surfboard landing page
+
+**[Application](https://lisovilya.github.io/Surfboard/)**
 
 This is a responsive landing page layout for a surfboard company.
 
